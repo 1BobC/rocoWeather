@@ -1,0 +1,29 @@
+/* #99 Project Preview & Setup */
+/* #100 HTML & CSS Template */
+
+body{
+    background: #eeedec;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+}
+.container{
+    max-width: 400px;
+}
+
+/* #101 AccuWeather API */
+/* #102 Get City API Call */
+/* #103 Get Weather API Call */
+/* #104 Updating the Location */
+/* #105 Object Shorthand Notation */
+/* #106 Updating the UI */
+/* #107 Destructuring */
+/* #108 Weather Icons & images */
+/* #109 Ternary Operator */
+
+.icon{
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: -50px;
+}
