@@ -1,5 +1,5 @@
 # rocoWeather
-Start again on weather app - keep it tidy!
+<!-- Start again on weather app - keep it tidy!
 #99 Project Preview & Setup
 #100 HTML & CSS Template
 #101 AccuWeather API 
@@ -10,5 +10,8 @@ Start again on weather app - keep it tidy!
 #106 Updating the UI
 #107 Destructuring
 #108 Weather Icons & images
-#109 Ternary Operator
+#109 Ternary Operator 
+#114. Updating the Weather App -->
 "Completed rocoWeather app from section 13 Project weather app tutorials #99 to #109"
+"Create ignore file for icons and svgs"
+"Complete update city in local storage from sect 13 no 114 Magic! section 13 and 14 nopw complete"

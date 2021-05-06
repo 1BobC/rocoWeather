@@ -81,4 +81,11 @@ cityForm.addEventListener('submit', e => {
     .then(data => updateUI(data))
     .catch(err => console.log(err));
 
+    //set city in local storage with #114. Updating the Weather App from section 14
+    localStorage.setItem('ctty', city);
 });
+    if(localStorage.getItem('ctty')){
+        updateCity(localStorage.getItem('ctty'))
+        .then(data => updateUI(data))
+        .catch(err => console.log(data));
+    }
