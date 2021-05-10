@@ -9,13 +9,21 @@
 //#107 Destructuring
 //#108 Weather Icons & images
 //#109 Ternary Operator
+//Return from section 15 #125 to #126 and apply oojs to rocoWeather to complete the project
 
 const cityForm= document.querySelector('form');
 const card= document.querySelector('.card');
 const details= document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
+//Return from section 15 #125 to #126 and apply oojs to rocoWeather to complete the project
+const forecast= new Forecast();
 
+//Return from section 15 #125 to #126 and apply oojs to rocoWeather to complete the project
+//console.log(forecast);
+
+//comment everything below out - Return from section 15 #125 to #126 and apply oojs to rocoWeather to complete the project
+//Return from section 15 #125 to #126 and apply oojs to rocoWeather to complete the project
 const updateUI= (data) => {
     //console.log(data);
     
@@ -40,32 +48,36 @@ const updateUI= (data) => {
     icon.setAttribute('src', iconSrc);
 
     //just see this!! #109 Ternary Operator
-//   let timeSrc = null;
-    let timeSrc= weather.IsDayTime ? 'img/day.svg' : 'img/night.svg';
+  //let timeSrc = null;
+   //let 
+   const timeSrc= weather.IsDayTime ? 'img/day.svg' : 'img/night.svg';
+//Instead of:
 //   if(weather.IsDayTime){
 //     timeSrc = 'img/day.svg';
 //   } else {
 //     timeSrc = 'img/night.svg';
 //   }
-  time.setAttribute('src', timeSrc);
+ time.setAttribute('src', timeSrc);
 
     //remove d-none (se index.html) if present
-    if(card.classList.contains('d-none')){
-        (card.classList.remove('d-none'));
+   if(card.classList.contains('d-none')){
+       (card.classList.remove('d-none'));
     }
-}
-
-const updateCity= async (city) => {
-    //console.log(city);
-    const cityDets= await getCity(city);
-    const weather= await getWeather(cityDets.Key);
-
-    return{
-        cityDets, //using #105 Object Shorthand Notation "cityDets: cityDets,"" becomes "cityDets"
-        weather   // etc! when property name and value name are the same 
-    };
-
 };
+
+//Return from section 15 #125 to #126 and apply oojs to rocoWeather to complete the project
+//so remove code below
+// const updateCity= async (city) => {
+//     console.log(city);
+//     const cityDets= await getCity(city);
+//     const weather= await getWeather(cityDets.Key);
+
+//     return{
+//         cityDets, //using #105 Object Shorthand Notation "cityDets: cityDets,"" becomes "cityDets"
+//         weather   // etc! when property name and value name are the same 
+//     };
+
+// };
 
 cityForm.addEventListener('submit', e => {
     //prevent default action
@@ -76,8 +88,7 @@ cityForm.addEventListener('submit', e => {
     cityForm.reset();
 
     //update the ui with new information
-    //updateCity(city).then(data => console.log(data))
-    updateCity(city)
+    forecast.updateCity(city)  //.then(data => console.log(data)) updateCity(city)
     .then(data => updateUI(data))
     .catch(err => console.log(err));
 
@@ -85,7 +96,7 @@ cityForm.addEventListener('submit', e => {
     localStorage.setItem('ctty', city);
 });
     if(localStorage.getItem('ctty')){
-        updateCity(localStorage.getItem('ctty'))
+        forecast.updateCity(localStorage.getItem('ctty'))
         .then(data => updateUI(data))
         .catch(err => console.log(data));
     }

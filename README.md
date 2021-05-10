@@ -14,4 +14,6 @@
 #114. Updating the Weather App -->
 "Completed rocoWeather app from section 13 Project weather app tutorials #99 to #109"
 "Create ignore file for icons and svgs"
-"Complete update city in local storage from sect 13 no 114 Magic! section 13 and 14 nopw complete"
+"Complete update city in local storage from sect 13 no 114 Magic! section 13 and 14 now complete"
+<!-- Section 15 #126 Apply oojs to rocoWeather to complete the project -->
+"Return from section 15 125 to 126 and apply oojs to rocoWeather Complete the project"
